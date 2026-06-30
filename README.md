@@ -1,14 +1,14 @@
 # NLP Lexical Processor
 
-A C implementation of a basic NLP lexical preprocessing pipeline using singly linked lists. The program tokenizes raw text, removes common stop words, and computes word frequencies — all built from scratch without external libraries.
+A C implementation of a basic NLP lexical preprocessing pipeline using singly linked lists. The program tokenizes raw text, removes common stop words, and computes word frequencies, all built from scratch without external libraries.
 
 ## Features
 
-- **Tokenization** — splits raw text into individual word tokens using whitespace and punctuation as delimiters, storing each token in a singly linked list.
-- **Stop Word Removal** — filters out common English stop words (e.g. *the, is, and, with*) from the token list, case-insensitively.
-- **Word Frequency Count** — builds a second, alphabetically sorted linked list that tracks how many times each unique word occurs.
-- **Interactive CLI** — menu-driven interface to run each step independently and inspect the list at any stage.
-- **Two input modes** — read text from `input.txt` or type it directly into the terminal.
+- **Tokenization:** splits raw text into individual word tokens using whitespace and punctuation as delimiters, storing each token in a singly linked list.
+- **Stop Word Removal:** filters out common English stop words (e.g. *the, is, and, with*) from the token list, case-insensitively.
+- **Word Frequency Count:** builds a second, alphabetically sorted linked list that tracks how many times each unique word occurs.
+- **Interactive CLI:** menu-driven interface to run each step independently and inspect the list at any stage.
+- **Two input modes:** read text from `input.txt` or type it directly into the terminal.
 
 ## How It Works
 
