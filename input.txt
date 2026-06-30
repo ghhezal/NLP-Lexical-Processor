@@ -1,0 +1,7 @@
+Natural language processing is a field of artificial intelligence that
+focuses on the interaction between computers and human language. It
+is used to apply algorithms to identify and extract information from
+text. The goal of this process is to convert unstructured data into
+a structured format that a machine can understand. Many applications
+such as search engines, chatbots, and translators rely on this kind
+of processing every single day.
