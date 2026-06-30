@@ -23,9 +23,14 @@ WordNode *head = NULL;
 WordNode *tail = NULL;
 repeatedWords *repeatedWordshead = NULL;
 
-
-
-
+void clearScreen()
+{
+#ifdef _WIN32
+    system("cls");
+#else
+    system("clear");
+#endif
+}
 
 void addWord(char *str)
 {
@@ -59,14 +64,6 @@ void tokenisation(char *text)
     printf("\ndone!\n\n");
 }
 
-
-
-
-
-
-
-
-
 bool isStopWord(char *word)
 {
     char *stopWords[] = {
@@ -84,12 +81,6 @@ bool isStopWord(char *word)
     }
     return false;
 }
-
-
-
-
-
-
 
 void removeWord(WordNode **prev, WordNode **cur)
 {
@@ -124,15 +115,6 @@ void removeStopWords()
     printf("\ndone!\n\n");
 }
 
-
-
-
-
-
-
-
-
-
 void printWords()
 {
     WordNode *pointer = head;
@@ -149,13 +131,6 @@ void printWords()
     }
     printf("\n\n");
 }
-
-
-
-
-
-
-
 
 void addWordSorted(char *word)
 {
@@ -247,13 +222,6 @@ void printFrequencies()
     printf("-------------------------------------\n");
 }
 
-
-
-
-
-
-
-
 int main()
 {
     int choice1, choice2;
@@ -268,7 +236,8 @@ int main()
 
     switch (choice1)
     {
-    case 1:{
+    case 1:
+    {
         FILE *file = fopen("input.txt", "r");
         if (file == NULL)
         {
@@ -280,9 +249,10 @@ int main()
         fclose(file);
         printf("\ndone reading!.\n\n");
         break;
-    } 
-    case 2:{
-         printf("Enter the text: ");
+    }
+    case 2:
+    {
+        printf("Enter the text: ");
         fgets(text, sizeof(text), stdin);
         text[strcspn(text, "\n")] = 0;
         break;
@@ -293,7 +263,7 @@ int main()
     }
 
     sleep(1);
-    system("cls");
+    clearScreen();
 
     while (true)
     {
@@ -306,24 +276,24 @@ int main()
         case 1:
             tokenisation(text);
             sleep(1);
-            system("cls");
+            clearScreen();
             break;
         case 2:
             removeStopWords();
             sleep(1);
-            system("cls");
+            clearScreen();
             break;
         case 3:
-            system("cls");
+            clearScreen();
             printWords();
             break;
         case 4:
-            system("cls");
+            clearScreen();
             calculateRepeatedWords();
             printFrequencies();
             break;
         case 5:
-            system("cls");
+            clearScreen();
             printf("goodbye\n");
             return 0;
         default:
